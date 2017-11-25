@@ -9,7 +9,6 @@ public class Menu : MonoBehaviour {
 	void Start()
 	{
 		AudioSystem ();
-		FireBase._instance.LogHome ();
 	}
 	public void StartGame()
 	{

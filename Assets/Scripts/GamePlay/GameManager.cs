@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
+	public TapsellTapsellTestV3V3 TapsellTapsellTestV3Instance;
 
 	[Header("GenBlock")]
 	private bool genFistTime = true;
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
 		AddPoint (0);
 
 		InvokeRepeating ("UpgradeParameter", 15, 15);
-		FireBase._instance.LogLevel (1);
+
 	}
 	
 	// Update is called once per frame
@@ -198,7 +199,6 @@ public class GameManager : MonoBehaviour
 	///</Summary>
 	public void GameOver(int index)
 	{
-		FireBase._instance.LogEndGame ();
 
 		switch (index) {
 		case 0:
@@ -219,7 +219,8 @@ public class GameManager : MonoBehaviour
 			}
 
 			AddPoint (1);
-			AdsControl.Instance.showAds ();
+			// Show Tapsell ADS
+			TapsellTapsellTestV3Instance.ShowAd();
 			endGamePanel.SetActive (true);
 			break;
 		case 1:
