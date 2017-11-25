@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
-	public TapsellTapsellTestV3V3 TapsellTapsellTestV3Instance;
 
 	[Header("GenBlock")]
 	private bool genFistTime = true;
@@ -220,7 +219,6 @@ public class GameManager : MonoBehaviour
 
 			AddPoint (1);
 			// Show Tapsell ADS
-			TapsellTapsellTestV3Instance.ShowAd();
 			endGamePanel.SetActive (true);
 			break;
 		case 1:
